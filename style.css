@@ -1,0 +1,350 @@
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 16px;
+    }
+}
+
+.login-user {
+    display: flex;
+    height: 1em;
+    margin-right: 0.5em;
+    vertical-align: bottom;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+ul {
+    border: 1px solid skyblue;
+    background-color: grey;
+}
+
+li a {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: skyblue;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: grey;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-login100-form-btn {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.login-user {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.register-user {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    align-content: center;
+}
+
+.navbar {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+}
+
+.nav-background {
+    background-image: url("./images/longbackthrem.png");
+    background-size: cover;
+    min-height: 100%;
+}
+
+.footer {
+    display: flex;
+    background-color: aqua;
+    align-content: end;
+    align-items: end;
+    align-self: flex-end;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: block;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: grey;
+    text-align: end;
+    padding: 14px 16px;
+    text-decoration: none;
+    overflow: visible;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+    overflow: visible;
+}
+
+li.dropdown {
+    display: inline-block;
+    overflow: visible;
+}
+
+.dropdown {
+    align-items: end;
+    float: right;
+    overflow: visible;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    align-items: end;
+    margin-left: auto;
+    overflow: visible;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    overflow: visible;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    overflow: visible;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    overflow: visible;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+    overflow: hidden;
+    height: 100vh;
+    overflow: visible;
+}
+
+.gallery {
+    overflow: scroll;
+}
+
+.lil-nav {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.gallery {
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery__img {
+    scroll-snap-align: start;
+    margin-bottom: 10px;
+}
+
+.gallery__img {
+    scroll-snap-align: start;
+    margin-bottom: 10px;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.lil-nav {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.lil-nav a {
+    height: 200px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.lil-nav__img {
+    object-fit: cover;
+}
+
+.gallery {
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.lil-nav__img {
+    object-fit: cover;
+    filter: saturate(0);
+    transition: 0.3s ease all;
+}
+
+.lil-nav__img:hover {
+    transform: scale(1.05);
+    filter: saturate(1);
+}
+
+$large: 1200px;
+
+.wrapper {
+    overflow: hidden;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 10px;
+
+    @media screen and (min-width: $large) {
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto;
+    }
+
+    .lil-nav {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        grid-row-start: 2;
+
+        @media screen and (min-width: $large) {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            display: block;
+            grid-row-start: auto;
+
+        }
+
+        .gallery {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            display: flex;
+
+            @media screen and (min-width: $large) {
+                display: block;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                scroll-snap-type: y mandatory;
+            }
+
+            * {
+                box-sizing: border-box
+            }
+
+            /* Add padding to containers */
+            .container {
+                padding: 16px;
+            }
+
+            /* Full-width input fields */
+            input[type=text],
+            input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+            }
+
+            input[type=text]:focus,
+            input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+            /* Overwrite default styles of hr */
+            hr {
+                border: 1px solid #f1f1f1;
+                margin-bottom: 25px;
+            }
+
+            /* Set a style for the submit/register button */
+            .registerbtn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            .registerbtn:hover {
+                opacity: 1;
+            }
+
+            /* Add a blue text color to links */
+            a {
+                color: dodgerblue;
+            }
+
+            /* Set a grey background color and center the text of the "sign in" section */
+            .signin {
+                background-color: #f1f1f1;
+                text-align: center;
+            }
